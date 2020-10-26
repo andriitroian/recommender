@@ -1,0 +1,18 @@
+<ng-container *ngIf="recommendations && recommendations.length">
+  <h1>You might be also interested in:</h1>
+  <div class="items-wrap">
+    <div class="item" *ngFor="let r of recommendations" [routerLink]="'/items/' + r.item._id">
+      <star-rating [ngModel]="r.rating" [disabled]="true"></star-rating>
+      <img [src]="r.item.picture" [alt]="r.item.title" />
+      <h3>{{r.item.title}}</h3>
+    </div>
+  </div>
+  <div class="separator"></div>
+</ng-container>
+
+<div class="items-wrap">
+  <div class="item" *ngFor="let i of items" [routerLink]="'/items/' + i._id">
+    <img [src]="i.picture" [alt]="i.title" />
+    <h3>{{i.title}}</h3>
+  </div>
+</div>

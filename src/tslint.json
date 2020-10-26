@@ -12,6 +12,8 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "indent": [true, "tabs", 4],
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
     }
 }
